@@ -14,7 +14,7 @@ colorFlipperBtn.addEventListener("click", ()=>{
 copyBtn.addEventListener("click", ()=>{
   window.navigator.clipboard.writeText(colors[colorNumber])
   console.log("Copy Btn Clicked")
-}
+})
 
 function getRandomNumber(){
     return Math.floor(Math.random()* colors.length)
