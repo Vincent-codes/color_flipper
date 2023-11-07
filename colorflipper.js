@@ -4,12 +4,16 @@ const colors = ["#000080", "#00008B", "#0000CD", "#0000FF", "#006400", "#008000"
 
 const colorFlipperBtn = document.getElementById("color_flipper_btn")
 const colorFlipperContainer = document.getElementById("color_flipper")
-
+const copyBtn = document.getElementById("color_flipper_btn_copy")
+const colorNumber = getRandomNumber()
 colorFlipperBtn.addEventListener("click", ()=>{
-  const colorNumber = getRandomNumber()
   document.body.style.backgroundColor = colors[colorNumber]
   colorFlipperContainer.textContent = colors[colorNumber]
 })
+
+copyBtn.addEventListener("click", ()=>{
+  window.navigator.clipboard.writeText(colors[colorNumber])
+}
 
 function getRandomNumber(){
     return Math.floor(Math.random()* colors.length)
