@@ -6,15 +6,17 @@ const colorFlipperBtn = document.getElementById("color_flipper_btn")
 const colorFlipperContainer = document.getElementById("color_flipper")
 const copyBtn = document.getElementById("color_flipper_btn_copy")
 
+let colorName;
+
 colorFlipperBtn.addEventListener("click", ()=>{
   const colorNumber = getRandomNumber()
   document.body.style.backgroundColor = colors[colorNumber]
   colorFlipperContainer.textContent = colors[colorNumber]
+  colorName= colors[colorNumber]
 })
 
 copyBtn.addEventListener("click", ()=>{
-  const colorNumber = getRandomNumber()
-  window.navigator.clipboard.writeText(colors[colorNumber])
+  window.navigator.clipboard.writeText(colorName)
   console.log("Copy Btn Clicked")
 })
 
