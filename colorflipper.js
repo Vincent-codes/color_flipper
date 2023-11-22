@@ -21,7 +21,6 @@ copyBtn.addEventListener("click", ()=>{
   setTimeout(()=>{
     document.getElementById("msg").style.display = "none"
   }, 2000)
-  console.log("Copy Btn Clicked")
 })
 
 function getRandomNumber(){
