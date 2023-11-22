@@ -17,6 +17,10 @@ colorFlipperBtn.addEventListener("click", ()=>{
 
 copyBtn.addEventListener("click", ()=>{
   window.navigator.clipboard.writeText(colorName)
+  document.getElementById("msg").style.display = "block"
+  setTimeout(()=>{
+    document.getElementById("msg").style.display = "none"
+  }, 2000)
   console.log("Copy Btn Clicked")
 })
 
